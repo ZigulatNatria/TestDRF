@@ -14,6 +14,6 @@ class Property(models.Model):
 class Entity(models.Model):
     modified_by = models.ForeignKey(User, on_delete=models.CASCADE)
     value = models.IntegerField()
-    properties = models.ManyToManyField('Property', null=True, blank=True)
+    properties = models.ManyToManyField('Property')
 
 
